@@ -27,19 +27,27 @@ public class BubbleSortTest {
 
 
     @Test
-    public void sort() throws Exception {
-        System.out.println("Bubble sort:");
+    public void sort1() throws Exception {
+        System.out.println("Bubble sort1:");
         System.out.println("Initial array = " + Arrays.toString(array));
-        BubbleSort.sort(array);
+        BubbleSort.sort1(array);
         System.out.println("Sorted array  = " + Arrays.toString(array));
     }
 
     @Test
-    public void upgradeSort() throws Exception {
-        System.out.println("Bubble upgrade sort:");
+    public void sort2() throws Exception {
+        System.out.println("Bubble sort2:");
         System.out.println("Initial array = " + Arrays.toString(array));
-        BubbleSort.sort(array);
+        BubbleSort.sort2(array);
         System.out.println("Sorted array  = " + Arrays.toString(array));
     }
 
+
+    @Test
+    public void sort3() throws Exception {
+        System.out.println("Bubble sort3:");
+        System.out.println("Initial array = " + Arrays.toString(array));
+        BubbleSort.sort3(array);
+        System.out.println("Sorted array  = " + Arrays.toString(array));
+    }
 }
