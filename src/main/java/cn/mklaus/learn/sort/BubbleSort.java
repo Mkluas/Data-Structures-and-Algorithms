@@ -4,6 +4,9 @@ package cn.mklaus.learn.sort;
  *
  * 冒泡排序
  *
+ * 最差时间分析	平均时间复杂度	稳定度	空间复杂度
+ * O(n2)	    O(n2)	        稳定 	O(1)
+ *
  * BubbleSortTest：
  *
  *      测试数据：{6, 3, 9, 4, 7, 1, 2, 8, 0, 5}
@@ -27,12 +30,6 @@ public class BubbleSort {
     }
 
 
-    private static void swap(int[] array, int form, int to) {
-        int temp = array[form];
-        array[form] = array[to];
-        array[to] = temp;
-    }
-
     /**
      * 两个for循环：
      *      如何冒泡？也就是说，把数组中最小的那个往上冒，冒的过程就是和他相邻的元素交换。这个冒的过程就是内循环。
@@ -48,7 +45,7 @@ public class BubbleSort {
                 runCount++;
 
                 if (shouldExchange(array, j, j + 1)) {
-                    swap(array, j, j + 1);
+                    SortUtils.swap(array, j, j + 1);
                 }
             }
         }
@@ -77,7 +74,7 @@ public class BubbleSort {
                 runCount++;
 
                 if (shouldExchange(array, j, j + 1)) {
-                    swap(array, j, j + 1);
+                    SortUtils.swap(array, j, j + 1);
                 }
             }
         }
@@ -113,7 +110,7 @@ public class BubbleSort {
                 if (shouldExchange(array, j, j + 1)) {
                     runCount++;
                     exchange = true;
-                    swap(array, j, j + 1);
+                    SortUtils.swap(array, j, j + 1);
                 }
             }
 
