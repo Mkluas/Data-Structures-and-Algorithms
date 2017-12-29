@@ -4,6 +4,9 @@ package cn.mklaus.learn.sort;
  *
  * 插入排序
  *
+ * 最差时间分析	平均时间复杂度	稳定度	空间复杂度
+ * O(n2)	    O(n2)	        稳定 	O(1)
+ *
  * @author Mklaus
  * @date 2017-12-23 下午3:33
  */
