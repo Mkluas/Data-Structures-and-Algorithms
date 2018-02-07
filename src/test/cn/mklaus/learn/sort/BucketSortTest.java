@@ -6,12 +6,12 @@ import static org.junit.Assert.*;
 
 /**
  * @author Mklaus
- * @date 2017-12-23 下午3:43
+ * @date 2018-02-07 下午4:09
  */
-public class InsertSortTest extends BaseSortTest {
+public class BucketSortTest extends BaseSortTest{
     @Test
     public void sort() throws Exception {
-        InsertSort.sort(array);
+        BucketSort.sort(array);
     }
 
 }

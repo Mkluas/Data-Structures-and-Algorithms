@@ -12,7 +12,6 @@ public class HeapSortTest extends BaseSortTest {
     @Test
     public void sort() throws Exception {
         HeapSort.sort(array);
-        SortUtils.printArray(array);
     }
 
 }

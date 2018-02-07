@@ -12,7 +12,6 @@ public class SelectionSortTest extends BaseSortTest {
     @Test
     public void sort() throws Exception {
         SelectionSort.sort(array);
-        SortUtils.printArray(array);
     }
 
 }

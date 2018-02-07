@@ -14,13 +14,11 @@ public class QuickSortTest extends BaseSortTest {
     @Test
     public void sort() throws Exception {
         QuickSort.sort(array, 0, array.length - 1);
-        SortUtils.printArray(array);
     }
 
 
     @Test
     public void sort2() throws Exception {
         QuickSort.sort2(array, 0, array.length - 1);
-        SortUtils.printArray(array);
     }
 }

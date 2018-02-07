@@ -12,7 +12,6 @@ public class MergeSortTest extends BaseSortTest {
     @Test
     public void sort() throws Exception {
         MergeSort.sort(array);
-        SortUtils.printArray(array);
     }
 
     @Test

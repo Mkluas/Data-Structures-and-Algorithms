@@ -15,12 +15,14 @@ public class BaseSortTest {
 
     @Before
     public void setUp() throws Exception {
-        this.array = new int[]{6, 3, 9, 4, 7, 1, 2, 8, 0, 5};
-        System.out.println("Init " + Arrays.toString(array) + "\n");
+        this.array = new int[]{6, 3333, 99, 4, 77, 1, 0, 222, 8, 1, 5};
+        System.out.println("\nInit " + Arrays.toString(array) + "\n");
     }
 
     @After
     public void tearDown() throws Exception {
+        SortUtils.printArray(array);
+        System.out.println("--------------------------------------------");
     }
 
 
