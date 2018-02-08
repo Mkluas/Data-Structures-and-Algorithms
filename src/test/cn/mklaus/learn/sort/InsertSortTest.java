@@ -9,9 +9,16 @@ import static org.junit.Assert.*;
  * @date 2017-12-23 下午3:43
  */
 public class InsertSortTest extends BaseSortTest {
+
+
     @Test
     public void sort() throws Exception {
         InsertSort.sort(array);
+    }
+
+    @Test
+    public void binarySort() throws Exception {
+        InsertSort.binarySort(array);
     }
 
 }
