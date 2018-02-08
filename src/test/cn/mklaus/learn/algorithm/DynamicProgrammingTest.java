@@ -52,7 +52,7 @@ public class DynamicProgrammingTest {
     public void setUp() throws Exception {
         this.m = 10;
         this.g = new int[]{3, 5, 3, 4, 3};
-        this.p = new int[]{400, 500, 200, 300, 350};
+        this.p = new int[]{350, 500, 200, 300, 400};
     }
 
     @After

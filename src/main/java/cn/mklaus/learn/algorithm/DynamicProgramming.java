@@ -112,12 +112,13 @@ public class DynamicProgramming {
      * @return
      */
     public static int backpackRecursion(int m, int n, int[] g, int[] p) {
-        if (n < 2) {
-            return (m >= g[n - 1]) ? p[n - 1] : 0;
+
+        if (n == 0 || m == 0) {
+            return 0;
         }
 
         if (m < g[n - 1]) {
-            return 0;
+            return backpack(m, n - 1, g, p);
         }
 
         return Math.max(backpackRecursion(m, n - 1, g, p), backpackRecursion(m - g[n - 1], n - 1, g, p) + p[n - 1]);
@@ -134,19 +135,19 @@ public class DynamicProgramming {
      * @return
      */
     public static int backpackNote(int m, int n, int[] g, int[] p, HashMap<String, Integer> map) {
-        if (n < 1) {
-            return (m >= g[n]) ? p[n] : 0;
+        if (n == 0 || m == 0) {
+            return 0;
         }
 
-        if (m < g[n]) {
-            return 0;
+        if (m < g[n - 1]) {
+            return backpack(m, n - 1, g, p);
         }
 
         String key = m + "_" + n;
         if (map.containsKey(key)) {
             return map.get(key);
         } else {
-            int value = Math.max(backpackRecursion(m, n - 1, g, p), backpackRecursion(m - g[n], n - 1, g, p) + p[n]);
+            int value = Math.max(backpackRecursion(m, n - 1, g, p), backpackRecursion(m - g[n - 1], n - 1, g, p) + p[n - 1]);
             map.put(key, value);
             return value;
         }
