@@ -1,10 +1,10 @@
 package cn.mklaus.learn.algorithm;
 
-import cn.mklaus.learn.sort.SortUtils;
-
 import java.util.HashMap;
 
 /**
+ * 动态规划编程
+ *
  * @author Mklaus
  * @date 2018-02-08 下午3:15
  */
