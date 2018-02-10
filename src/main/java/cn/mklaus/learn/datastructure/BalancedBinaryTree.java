@@ -263,7 +263,7 @@ public class BalancedBinaryTree  {
         tree.insert(7, "");
         tree.insert(1, "");
         System.out.println(tree);
-        tree.remove(2);
+        tree.remove(5);
         System.out.println(tree);
     }
 
