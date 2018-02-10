@@ -31,12 +31,11 @@ public class BalancedBinaryTree  {
             if (!isBalance(parent)) {
 
                 if (isLeftChild(node, parent.left)) {
-                    // 左左
+                    // LL, 进行右旋操作
                     parent = this.rotateWithLeftChild(parent);
 
                 } else {
-                    // 左右
-
+                    // LR, 先左旋，再右旋
                     parent = this.doubleRotateWithLeftChild(parent);
                 }
 
@@ -51,13 +50,12 @@ public class BalancedBinaryTree  {
             if (!isBalance(parent)) {
 
                 if (isLeftChild(node, parent.right)) {
-                    System.out.println("parent = " + parent.key);
-                    // 右左
+                    // RL 先右旋，再左旋
                     parent = this.doubleRotateWithRightChild(parent);
 
 
                 } else {
-                    // 右右
+                    // RR 进行左旋操作
                     parent = this.rotateWithRightChild(parent);
 
                 }
